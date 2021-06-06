@@ -5,11 +5,9 @@
 # ----------------------------------
 FROM        python:3-alpine
 
-LABEL       author="Michael Parker" maintainer="docker@parkervcp.com"
+LABEL       author="Alex G." maintainer="admin@mg100.net"
 
-RUN         apk add --no-cache --update \
-            && apk add openrc \
-            && apk add openssh \
+RUN         apk add --no-cache --update git chromium tar curl wget screen xvfb scrot \
             && adduser -D -h /home/container container
 
 USER        container
