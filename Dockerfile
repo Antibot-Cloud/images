@@ -13,7 +13,7 @@ RUN         apk add git --no-cache \
             && apk add build-base \
             && apk add tar --no-cache \
             && apk add curl --no-cache \
-            && apk add libjpeg-dev \
+            && apk add jpeg-dev \
             && pip install Pillow \
             && apk add wget --no-cache \
             && apk del ash \
