@@ -15,7 +15,7 @@ RUN         apk add git --no-cache \
             && apk add curl --no-cache \
             && apk add jpeg-dev \
             && apk add zlib \
-            && python -m pip install -U --force-reinstall pip
+            && python -m pip install -U --force-reinstall pip \
             && pip install Pillow \
             && apk add wget --no-cache \
             && apk del ash \
