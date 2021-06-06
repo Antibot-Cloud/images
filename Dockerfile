@@ -13,8 +13,9 @@ RUN         apk add git --no-cache \
             && apk add build-base \
             && apk add tar --no-cache \
             && apk add curl --no-cache \
+            && pip install Pillow \
             && apk add wget --no-cache \
-            && apk del build-deps \
+            && apk del ash \
             && adduser -D -h /home/container container
 
 USER        container
