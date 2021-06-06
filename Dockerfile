@@ -7,18 +7,17 @@ FROM        python:3-alpine
 
 LABEL       author="AntiBotCloud" maintainer="AntiBotCloud"
 
+RUN         apk --update add libxml2-dev libxslt-dev libffi-dev gcc musl-dev libgcc openssl-dev curl
+RUN         apk add jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev
+RUN         pip install Pillow
+
 RUN         apk add git --no-cache \
             && apk add bash \
             && apk add python3-dev \
             && apk add build-base \
             && apk add tar --no-cache \
             && apk add curl --no-cache \
-            && apk add jpeg-dev \
-            && apk add zlib \
-            && python -m pip install -U --force-reinstall pip \
-            && pip install Pillow \
             && apk add wget --no-cache \
-            && apk del ash \
             && adduser -D -h /home/container container
 
 USER        container
