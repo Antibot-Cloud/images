@@ -8,9 +8,8 @@ FROM        python:3-alpine
 LABEL       author="Michael Parker" maintainer="docker@parkervcp.com"
 
 RUN         apk add --no-cache --update \
-            && apk add openssh \
             && apk add openrc \
-            && rc-update add sshd \
+            && apk add openssh \
             && adduser -D -h /home/container container
 
 USER        container
