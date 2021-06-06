@@ -8,6 +8,7 @@ FROM        python:3-alpine
 LABEL       author="Alex G." maintainer="admin@mg100.net"
 
 RUN         apk add git --no-cache \
+            && apk add bash \
             && apk add build-base --no-cache \
             && apk add tar --no-cache \
             && apk add curl --no-cache \
