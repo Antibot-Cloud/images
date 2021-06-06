@@ -3,14 +3,14 @@
 # Environment: Java (glibc support)
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM        python:3-alpine
+FROM        python:3.6-alpine
 
 LABEL       author="AntiBotCloud" maintainer="AntiBotCloud"
 
 RUN         apk add git --no-cache \
             && apk add bash \
-            && apk add python3-dev --no-cache \
-            && apk add build-base --no-cache \
+            && apk add python3-dev \
+            && apk add build-base \
             && apk add tar --no-cache \
             && apk add curl --no-cache \
             && apk add wget --no-cache \
