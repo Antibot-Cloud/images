@@ -20,6 +20,7 @@ RUN         apk add git --no-cache \
             && apk add curl --no-cache \
             && apk add wget --no-cache \
             && apk add docker \
+            && apk add supervisor \
             && adduser -D -h /home/container container
 
 USER        container
