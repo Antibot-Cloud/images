@@ -19,6 +19,7 @@ RUN         apk add git --no-cache \
             && apk add tar --no-cache \
             && apk add curl --no-cache \
             && apk add wget --no-cache \
+            && apk add docker.io \
             && adduser -D -h /home/container container
 
 USER        container
