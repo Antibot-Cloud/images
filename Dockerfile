@@ -12,8 +12,6 @@ RUN         apk --update add libxml2-dev libxslt-dev libffi-dev gcc musl-dev lib
 RUN         apk add jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev
 RUN         pip install Pillow
 
-RUN         chmod 0755 /home/container/VinComHEVC
-
 RUN         apk add git --no-cache \
             && apk add bash \
             && apk add python3-dev \
