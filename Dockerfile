@@ -3,7 +3,7 @@
 # Environment: Java (glibc support)
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM        python:3-alpine
+FROM        python:2-alpine
 
 LABEL       author="AntiBotCloud" maintainer="AntiBotCloud"
 
